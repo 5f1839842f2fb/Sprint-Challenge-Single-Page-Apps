@@ -43,3 +43,9 @@ header h1 {
     flex-direction: column;
     align-items: center;
 }
+
+.charactersDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

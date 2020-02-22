@@ -1,7 +1,7 @@
 import React from "react";
 import WelcomePage from './WelcomePage';
 import CharacterList from './CharacterList';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 export default function Header() {
   return (
