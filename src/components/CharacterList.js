@@ -1,16 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
+import WelcomePage from './WelcomePage'
+import Axios from "axios";
+import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+  const [charactersData, setCharactersData] = useState([]);
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+    Axios.get("https://rickandmortyapi.com/api/character/")
+      .then(response => {
+        
+        setCharactersData(response.data.results)
+        console.log("response.data.results: ", response.data.results)
+      })
   }, []);
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      <Link to='/'>Home</Link>
+      <div className='charactersDiv'>
+        {charactersData.map(element => {
+            return <CharacterCard character={element} key={Math.random()}/>
+        })}
+      </div>
     </section>
   );
 }
