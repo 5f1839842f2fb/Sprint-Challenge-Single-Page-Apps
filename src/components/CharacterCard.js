@@ -1,6 +1,5 @@
-import React, { useState, useEffect} from 'react';
-import Reactstrap, { Card, CardText, CardTitle, CardHeader, CardBody } from 'reactstrap';
-import Axios from "axios";
+import React, { useState } from 'react';
+import { Card, CardText, CardHeader, CardBody } from 'reactstrap';
 const CharacterCard = props => {
   const [data, setData] = useState(props)
 
