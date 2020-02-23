@@ -27,6 +27,9 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
+    More efficient - stuff like headers and footers arent being freshly loaded from the server every time the user visits a new page
+    No page refresh on every link so it feels more responsive
+
 > Answer:
 
 ## Project Set Up
